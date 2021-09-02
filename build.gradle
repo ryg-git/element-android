@@ -84,6 +84,14 @@ allprojects {
     tasks.withType(org.jlleitschuh.gradle.ktlint.tasks.BaseKtLintCheckTask).configureEach {
         it.workerMaxHeapSize.set("1024m")
     }
+
+    // See https://github.com/JLLeitschuh/ktlint-gradle#configuration
+    ktlint {
+        android = true
+        ignoreFailures = false
+        enableExperimentalRules = true
+        disabledRules = ["spacing-between-declarations-with-comments"]
+    }
 }
 
 task clean(type: Delete) {
