@@ -24,7 +24,14 @@ buildscript {
     }
 }
 
+// ktlint Plugin
+plugins {
+    id "org.jlleitschuh.gradle.ktlint" version "10.1.0"
+}
+
 allprojects {
+    apply plugin: "org.jlleitschuh.gradle.ktlint"
+
     repositories {
         // For olm library. This has to be declared first, to ensure that Olm library is not downloaded from another repo
         maven {
