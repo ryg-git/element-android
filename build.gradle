@@ -79,6 +79,11 @@ allprojects {
         // You can override by passing `-PallWarningsAsErrors=false` in the command line
         kotlinOptions.allWarningsAsErrors = project.getProperties().getOrDefault("allWarningsAsErrors", "true").toBoolean()
     }
+
+    // Fix "Java heap space" issue
+    tasks.withType(org.jlleitschuh.gradle.ktlint.tasks.BaseKtLintCheckTask).configureEach {
+        it.workerMaxHeapSize.set("1024m")
+    }
 }
 
 task clean(type: Delete) {
