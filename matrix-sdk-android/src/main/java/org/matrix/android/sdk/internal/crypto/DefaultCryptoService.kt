@@ -431,7 +431,14 @@ internal class DefaultCryptoService @Inject constructor(
                     deviceListManager.refreshOutdatedDeviceLists()
                     // The presence of device_unused_fallback_key_types indicates that the server supports fallback keys.
                     // If there's no unused signed_curve25519 fallback key we need a new one.
-                    val shouldGenerateFallbackKey = !syncResponse.deviceUnusedFallbackKeyTypes?.contains(KEY_SIGNED_CURVE_25519_TYPE).orTrue()
+                    val shouldGenerateFallbackKey = if (syncResponse.deviceUnusedFallbackKeyTypes != null) {
+                        // Generate a fallback key only if the server does not already have an unused fallback key.
+                        !syncResponse.deviceUnusedFallbackKeyTypes.contains(KEY_SIGNED_CURVE_25519_TYPE)
+                    } else {
+                        // Server does not support fallbackKey
+                        false
+                    }
+
                     oneTimeKeysUploader.maybeUploadOneTimeKeys(shouldGenerateFallbackKey)
                     incomingGossipingRequestManager.processReceivedGossipingRequests()
                 }

@@ -180,7 +180,11 @@ internal class OneTimeKeysUploader @Inject constructor(
 
         // For now, we set the device id explicitly, as we may not be using the
         // same one as used in login.
-        val uploadParams = UploadKeysTask.Params(null, oneTimeJson, fallbackJson)
+        val uploadParams = UploadKeysTask.Params(
+                deviceKeys = null,
+                oneTimeKeys = oneTimeJson,
+                fallbackKeys = if (fallbackJson.isNotEmpty()) fallbackJson else null
+        )
         return uploadKeysTask.execute(uploadParams)
     }
 

@@ -150,7 +150,7 @@ internal class MXOlmDevice @Inject constructor(
             store.getOlmAccount().generateFallbackKey()
             store.saveOlmAccount()
         } catch (e: Exception) {
-            Timber.e("## getFallbackKey() : failed")
+            Timber.e("## generateFallbackKey() : failed")
         }
     }
 
