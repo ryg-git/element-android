@@ -125,7 +125,7 @@ internal class OneTimeKeysUploader @Inject constructor(
      * @return the number of uploaded keys
      */
     private suspend fun uploadOTK(keyCount: Int, keyLimit: Int, shouldGenerateFallbackKey: Boolean): Int {
-        if (keyLimit <= keyCount) {
+        if (keyLimit <= keyCount && !shouldGenerateFallbackKey) {
             // If we don't need to generate any more keys then we are done.
             return 0
         }
@@ -167,7 +167,8 @@ internal class OneTimeKeysUploader @Inject constructor(
         }
 
         val fallbackJson = mutableMapOf<String, Any>()
-        fallbackKey?.forEach { (key_id, key) ->
+        val fallbackCurve25519Map = fallbackKey?.get(OlmAccount.JSON_KEY_ONE_TIME_KEY).orEmpty()
+        fallbackCurve25519Map.forEach { (key_id, key) ->
             val k = mutableMapOf<String, Any>()
             k["key"] = key
             k["fallback"] = true
