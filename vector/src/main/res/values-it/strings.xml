@@ -1185,8 +1185,7 @@
     <string name="open_settings">Apri le Impostazioni</string>
     <string name="settings_troubleshoot_test_account_settings_title">Impostazioni account.</string>
     <string name="settings_troubleshoot_test_account_settings_success">Le notifiche sono abilitate per il tuo account.</string>
-    <string name="settings_troubleshoot_test_account_settings_failed">Le notifiche sono disabilitate per il tuo account.
-\nControlla le impostazioni dell\'account.</string>
+    <string name="settings_troubleshoot_test_account_settings_failed">Le notifiche sono disabilitate per il tuo account.\nControlla le impostazioni dell\'account.</string>
     <string name="settings_troubleshoot_test_account_settings_quickfix">Abilita</string>
     <string name="settings_troubleshoot_test_device_settings_title">Impostazioni sessione.</string>
     <string name="settings_troubleshoot_test_device_settings_success">Le notifiche sono attive per questa sessione.</string>
@@ -1742,13 +1741,13 @@
     <string name="room_join_rules_public">%1$s ha reso la stanza pubblica. Ora è raggiungibile da chiunque ne conosca l\'indirizzo.</string>
     <string name="room_join_rules_invite">%1$s ha reso la stanza accessibile solo su invito.</string>
     <string name="timeline_unread_messages">Messaggi non letti</string>
-    <string name="login_splash_title">Le -tue- conversazioni appartengono solo a te.</string>
+    <string name="login_splash_title">Le tue conversazioni appartengono solo a te.</string>
     <string name="login_splash_text1">Scambia messaggi diretti o nei gruppi</string>
     <string name="login_splash_text2">Rendi sicure le tue conversazioni grazie alla crittografia</string>
     <string name="login_splash_text3">Estendi e personalizza la tua esperienza</string>
     <string name="login_splash_submit">Inizia</string>
     <string name="login_server_title">Seleziona un server</string>
-    <string name="login_server_text">Proprio come le email: puoi fare un account dove preferisci e interagire con tutti</string>
+    <string name="login_server_text">Proprio come con le email, puoi creare un account dove preferisci e interagire con chiunque</string>
     <string name="login_server_matrix_org_text">Unisciti gratuitamente a milioni di utenti sul più grande server pubblico</string>
     <string name="login_server_modular_text">Hosting premium per organizzazioni</string>
     <string name="login_server_modular_learn_more">Maggiori info</string>
@@ -2839,7 +2838,6 @@
     <string name="space_leave_prompt_msg_as_admin">Sei l\'Amministratore di questo Spazio. Assicurati di aver nominato un altro amministratore prima di uscire.</string>
     <string name="space_leave_prompt_msg_only_you">Sei l\'unico utente di questo Spazio. Se esci nessuno potrà più entrarci. Nemmeno tu.</string>
     <string name="space_add_rooms">Aggiungi stanze</string>
-    <string name="labs_space_show_orphan_in_home">Spazio sperimentale - Mostra solo stanze orfane nella Home</string>
     <string name="this_space_has_no_rooms_admin">Alcune stanze potrebbero essere nascoste perché sono private e ti serve il loro invito.</string>
     <string name="this_space_has_no_rooms_not_admin">Alcune stanze potrebbero essere nascoste perché sono private e ti serve il loro invito.
 \nNon hai il permesso di aggiungere stanze.</string>
@@ -2874,7 +2872,7 @@
     <string name="upgrade_room_no_power_to_manage">Ti serve il permesso per aggiornare una stanza</string>
     <string name="upgrade_room_update_parent_space">Aggiorna il padre dello spazio automaticamente</string>
     <string name="upgrade_room_auto_invite">Invita utenti automaticamente</string>
-    <string name="upgrade_public_room_from_to">Aggiornerai questa stanza dalla %s alla %s.</string>
+    <string name="upgrade_public_room_from_to">Aggiornerai questa stanza dalla %1$s alla %2$s.</string>
     <string name="upgrade_room_warning">L\'aggiornamento di una stanza è un\'azione avanzata e solitamente è consigliata quando una stanza è instabile a causa di errori, funzionalità mancanti o vulnerabilità di sicurezza.
 \nDi solito influisce solo su come la stanza viene elaborata sul server.</string>
     <string name="upgrade_private_room">Aggiorna stanza privata</string>
@@ -2934,4 +2932,17 @@
     <string name="room_create_member_of_space_name_can_join">I membri dello spazio %s possono trovare, vedere l\'anteprima ed entrare.</string>
     <string name="room_settings_room_access_private_invite_only_title">Privata (solo a invito)</string>
     <string name="denied_permission_voice_message">Per inviare messaggi vocali, consenti l\'autorizzazione del microfono.</string>
+    <string name="settings_room_upgrades">Aggiornamenti stanza</string>
+    <string name="settings_messages_by_bot">Messaggi da bot</string>
+    <string name="settings_room_invitations">Inviti a stanze</string>
+    <string name="settings_encrypted_group_messages">Messaggi di gruppo cifrati</string>
+    <string name="settings_group_messages">Messaggi di gruppo</string>
+    <string name="settings_encrypted_direct_messages">Messaggi diretti cifrati</string>
+    <string name="settings_messages_direct_messages">Messaggi diretti</string>
+    <string name="settings_messages_containing_username">Messaggi contenenti il mio nome utente</string>
+    <string name="settings_messages_containing_display_name">Messaggi contenenti il mio nome mostrato</string>
+    <string name="settings_notification_notify_me_for">Notificami per</string>
+    <string name="settings_notification_other">Altro</string>
+    <string name="settings_notification_mentions_and_keywords">Menzioni e parole chiave</string>
+    <string name="settings_notification_default">Notifiche predefinite</string>
 </resources>

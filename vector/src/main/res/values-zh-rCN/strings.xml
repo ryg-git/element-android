@@ -1692,7 +1692,7 @@
     <string name="room_join_rules_invite">%1$s 将聊天室设为仅限邀请。</string>
     <string name="room_join_rules_invite_by_you">你将聊天室设为仅限邀请。</string>
     <string name="timeline_unread_messages">未读消息</string>
-    <string name="login_splash_title">这是你的对话。拥有它。</string>
+    <string name="login_splash_title">这是你的对话。它只属于你。</string>
     <string name="login_splash_text1">与人们私聊或群聊</string>
     <string name="login_splash_text2">通过加密保证对话私密</string>
     <string name="login_splash_text3">扩展 &amp; 自定义你的体验</string>
@@ -2583,7 +2583,6 @@
     <string name="spaces_no_server_support_title">看来你的主服务器尚未支持空间</string>
     <string name="spaces_feeling_experimental_subspace">想要做点实验？
 \n你可以将现有的空间添加到其他空间中。</string>
-    <string name="labs_space_show_orphan_in_home">实验性空间 - 仅在首页显示无人看管的聊天室</string>
     <string name="space_manage_rooms_and_spaces">管理聊天室和空间</string>
     <string name="space_mark_as_not_suggested">标记为不建议</string>
     <string name="space_mark_as_suggested">标记为建议</string>
@@ -2777,7 +2776,7 @@
     <string name="upgrade_room_no_power_to_manage">您需要权限才能升级聊天室</string>
     <string name="upgrade_room_update_parent_space">自动更新空间父级</string>
     <string name="upgrade_room_auto_invite">自动邀请用户</string>
-    <string name="upgrade_public_room_from_to">你将把此聊天室从 %s 升级到 %s。</string>
+    <string name="upgrade_public_room_from_to">你将把此聊天室从 %1$s 升级到 %2$s。</string>
     <string name="upgrade_room_warning">升级聊天室是一项高级操作，通常建议在由于错误、缺少功能或安全漏洞造成聊天室不稳定时进行此操作。
 \n这通常只会影响此服务器如何处理该聊天室。</string>
     <string name="upgrade_private_room">升级私人聊天室</string>
@@ -2835,4 +2834,17 @@
     <string name="room_create_member_of_space_name_can_join">%s 空间的成员可找到、预览和加入。</string>
     <string name="room_settings_room_access_private_invite_only_title">私人（仅限邀请）</string>
     <string name="denied_permission_voice_message">要发送语音消息，请授予麦克风权限。</string>
+    <string name="settings_room_upgrades">聊天室升级</string>
+    <string name="settings_messages_by_bot">机器人消息</string>
+    <string name="settings_room_invitations">聊天室邀请</string>
+    <string name="settings_encrypted_group_messages">加密的群组消息</string>
+    <string name="settings_group_messages">群组消息</string>
+    <string name="settings_encrypted_direct_messages">加密的私信</string>
+    <string name="settings_messages_direct_messages">私信</string>
+    <string name="settings_messages_containing_username">包含我的用户名的消息</string>
+    <string name="settings_messages_containing_display_name">包含我的显示名称的消息</string>
+    <string name="settings_notification_notify_me_for">通知事项</string>
+    <string name="settings_notification_other">其他</string>
+    <string name="settings_notification_mentions_and_keywords">提及和关键词</string>
+    <string name="settings_notification_default">默认通知</string>
 </resources>

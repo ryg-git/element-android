@@ -2152,7 +2152,7 @@
         <item quantity="other">Enviar imagens com o tamanho original</item>
     </plurals>
     <string name="delete_event_dialog_title">Confirmar Remoção</string>
-    <string name="delete_event_dialog_content">Você tem certeza que você deseja remover (deletar) este evento\? Note que se você deletar um nome de sala ou mudança de tópico, poderia desfazer a mudança.</string>
+    <string name="delete_event_dialog_content">Você tem certeza que você deseja remover (deletar) este evento\? Note que se você deletar um nome de sala ou mudança de tópico, isto poderia desfazer a mudança.</string>
     <string name="delete_event_dialog_reason_checkbox">Incluir uma razão</string>
     <string name="delete_event_dialog_reason_hint">Razão para redigir</string>
     <string name="event_redacted_by_user_reason_with_reason">Evento deletado por usuária(o), razão: %1$s</string>
@@ -2803,7 +2803,6 @@
     <string name="spaces_no_server_support_title">Parece que seu servidorcasa não suporta Espaços ainda</string>
     <string name="spaces_feeling_experimental_subspace">Se sentindo experimental\?
 \nVocê pode adicionar espaços existentes a um espaço.</string>
-    <string name="labs_space_show_orphan_in_home">Espaço Experimental - Somente mostrar órfãos em Home</string>
     <string name="space_manage_rooms_and_spaces">Gerenciar salas e espaços</string>
     <string name="make_this_space_public">Fazer este espaço público</string>
     <string name="space_settings_manage_rooms">Gerenciar salas</string>
@@ -2890,7 +2889,7 @@
     <string name="upgrade_room_no_power_to_manage">Você precisa de permissão para fazer upgrade de uma sala</string>
     <string name="upgrade_room_update_parent_space">Fazer update de pai de espaço automaticamente</string>
     <string name="upgrade_room_auto_invite">Convidar usuárias(os) automaticamente</string>
-    <string name="upgrade_public_room_from_to">Você vai fazer upgrade desta sala de %s para %s.</string>
+    <string name="upgrade_public_room_from_to">Você vai fazer upgrade desta sala de %1$s para %2$s.</string>
     <string name="upgrade_room_warning">Fazer upgrade de uma sala é uma ação avançada e é geralmente recomendado quando uma sala está instável devido a bugs, funcionalidades faltando ou vulnerabilidades de segurança.
 \nIsto geralmente só afeta como a sala é processada no servidor.</string>
     <string name="upgrade_private_room">Fazer upgrade de sala privada</string>
@@ -2950,4 +2949,17 @@
     <string name="room_create_member_of_space_name_can_join">Membros de Escpaço %s podem encontrar, previsualizar e juntar-se.</string>
     <string name="room_settings_room_access_private_invite_only_title">Privada (Convite Somente)</string>
     <string name="denied_permission_voice_message">Para enviar mensagens de voz, por favor conceda a permissão Microfone.</string>
+    <string name="settings_notification_notify_me_for">Notifique-me para</string>
+    <string name="settings_room_upgrades">Upgrades de sala</string>
+    <string name="settings_messages_by_bot">Mensagens por bot</string>
+    <string name="settings_room_invitations">Convites de sala</string>
+    <string name="settings_encrypted_group_messages">Mensagens de grupo encriptadas</string>
+    <string name="settings_group_messages">Mensagens de grupo</string>
+    <string name="settings_encrypted_direct_messages">Mensagens diretas encriptadas</string>
+    <string name="settings_messages_direct_messages">Mensagens diretas</string>
+    <string name="settings_messages_containing_username">Mensagens contendo meu nome de usuária(o)</string>
+    <string name="settings_messages_containing_display_name">Mensagens contendo meu nome de exibição</string>
+    <string name="settings_notification_other">Outras</string>
+    <string name="settings_notification_mentions_and_keywords">Menções e Palavrachaves</string>
+    <string name="settings_notification_default">Notificações Default</string>
 </resources>

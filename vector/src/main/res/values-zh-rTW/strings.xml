@@ -2726,7 +2726,6 @@
     <string name="spaces_no_server_support_title">看來您的家伺服器尚未支援空間</string>
     <string name="spaces_feeling_experimental_subspace">想要做點實驗嗎？
 \n您可以將既有的空間新增至其他空間中。</string>
-    <string name="labs_space_show_orphan_in_home">實驗性空間，僅在首頁顯示無人看管的聊天室</string>
     <string name="space_add_rooms">新增聊天室</string>
     <string name="space_leave_prompt_msg_as_admin">您是此空間的管理員，請確保在您離開前已將管理權轉交給另一個成員。</string>
     <string name="space_leave_prompt_msg_private">此空間並非公開。您將無法在無邀請的狀況下重新加入。</string>
@@ -2767,7 +2766,7 @@
     <string name="upgrade_room_no_power_to_manage">您需要升級聊天室的權限</string>
     <string name="upgrade_room_update_parent_space">自動更新空間上層</string>
     <string name="upgrade_room_auto_invite">自動邀請使用者</string>
-    <string name="upgrade_public_room_from_to">您將要把此聊天室從 %s 升級到 %s。</string>
+    <string name="upgrade_public_room_from_to">您將要把此聊天室從 %1$s 升級到 %2$s。</string>
     <string name="upgrade_room_warning">升級聊天是是一項進階動作，通常建議在聊天室因臭蟲、缺少功能或安全漏洞而不穩定時使用。
 \n這通常只會影響聊天是在伺服器上的處理方式。</string>
     <string name="upgrade_private_room">升級私人聊天室</string>
@@ -2825,4 +2824,17 @@
     <string name="room_create_member_of_space_name_can_join">空間 %s 的成員可以找到、預覽並加入。</string>
     <string name="room_settings_room_access_private_invite_only_title">私人（僅邀請）</string>
     <string name="denied_permission_voice_message">要傳送語音訊息，請授予「麥克風」權限。</string>
+    <string name="settings_room_upgrades">聊天室升級</string>
+    <string name="settings_messages_by_bot">機器人訊息</string>
+    <string name="settings_room_invitations">聊天室邀請</string>
+    <string name="settings_encrypted_group_messages">已加密的群組訊息</string>
+    <string name="settings_group_messages">群組訊息</string>
+    <string name="settings_encrypted_direct_messages">已加密的直接訊息</string>
+    <string name="settings_messages_direct_messages">直接訊息</string>
+    <string name="settings_messages_containing_username">訊息包含了我的使用者名稱</string>
+    <string name="settings_messages_containing_display_name">訊息包含了我的顯示名稱</string>
+    <string name="settings_notification_notify_me_for">通知我</string>
+    <string name="settings_notification_other">其他</string>
+    <string name="settings_notification_mentions_and_keywords">提及與關鍵字</string>
+    <string name="settings_notification_default">預設通知</string>
 </resources>

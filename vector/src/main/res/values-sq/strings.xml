@@ -2769,7 +2769,6 @@
     <string name="spaces_no_server_support_title">Duket sikur shërbyesi juaj Home nuk mbulon ende Hapësira</string>
     <string name="spaces_feeling_experimental_subspace">Ndiheni eksperimentues\?
 \nMund të shtoni te një hapësirë hapësira ekzistuese.</string>
-    <string name="labs_space_show_orphan_in_home">Hapësirë Eksperimentale - Shfaq jetimë te Kreu</string>
     <string name="space_add_rooms">Shtoni dhoma</string>
     <string name="space_leave_prompt_msg_as_admin">Jeni përgjegjës i kësaj hapësirë, sigurohuni se keni shpërngulur të drejt përgjegjësi te një anëtar tjetër, përpara braktisjes.</string>
     <string name="space_leave_prompt_msg_private">Kjo hapësirë s’është publike. S’do të jeni në gjendje të rihyni pa një ftesë.</string>
@@ -2810,7 +2809,7 @@
     <string name="upgrade_room_no_power_to_manage">Ju duhen leje për të përmirësua një dhomë</string>
     <string name="upgrade_room_update_parent_space">Përditëso automatikisht mëmë hapësire</string>
     <string name="upgrade_room_auto_invite">Fto përdorues automatikisht</string>
-    <string name="upgrade_public_room_from_to">Do ta përmirësoni këtë dhomë nga %s në %s.</string>
+    <string name="upgrade_public_room_from_to">Do ta përmirësoni këtë dhomë nga %1$s në %2$s.</string>
     <string name="upgrade_room_warning">Përmirësimi i një dhome është një veprim i thelluar dhe zakonisht i rekomanduar kur një dhomë është e paqëndrueshme për shkak të metash, veçorish që mungojnë ose cenueshmëri sigurie.
 \nZakonisht kjo prek vetëm mënyrën se si trajtohet dhoma te shërbyesi.</string>
     <string name="upgrade_private_room">Përmirësoni dhomë private</string>
@@ -2870,4 +2869,17 @@
     <string name="room_create_member_of_space_name_can_join">Anëtarë të Hapësirës %s mund ta gjejnë, parashohin dhe hyjnë në të.</string>
     <string name="room_settings_room_access_private_invite_only_title">Private (Vetëm Me Ftesa)</string>
     <string name="denied_permission_voice_message">Për të dërguar mesazhe zanorë, ju lutemi, akordoni leje Mikrofoni.</string>
+    <string name="settings_room_upgrades">Përmirësime dhome</string>
+    <string name="settings_messages_by_bot">Mesazhe nga roboti</string>
+    <string name="settings_room_invitations">Ftesa për në dhoma</string>
+    <string name="settings_encrypted_group_messages">Mesazhe të fshehtëzuar grupi</string>
+    <string name="settings_group_messages">Mesazhe grupi</string>
+    <string name="settings_encrypted_direct_messages">Mesazhe të drejtpërdrejtë të fshehtëzuar</string>
+    <string name="settings_messages_direct_messages">Mesazhe të drejtpërdrejtë</string>
+    <string name="settings_messages_containing_username">Mesazhe që përmbajnë emrin tim të përdoruesit</string>
+    <string name="settings_messages_containing_display_name">Mesazhe që përmbajnë emrin tim të ekranit</string>
+    <string name="settings_notification_notify_me_for">Njoftomë për</string>
+    <string name="settings_notification_other">Tjetër</string>
+    <string name="settings_notification_mentions_and_keywords">Përmendje dhe Fjalëkyçe</string>
+    <string name="settings_notification_default">Njoftime Parazgjedhje</string>
 </resources>
