@@ -22,4 +22,5 @@ sealed class HomeDetailAction : VectorViewModelAction {
     data class SwitchTab(val tab: HomeTab) : HomeDetailAction()
     object MarkAllRoomsRead : HomeDetailAction()
     data class StartCallWithPhoneNumber(val phoneNumber: String): HomeDetailAction()
+    object ViewResumed : HomeDetailAction()
 }

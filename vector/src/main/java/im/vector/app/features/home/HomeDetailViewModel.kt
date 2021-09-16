@@ -33,6 +33,7 @@ import im.vector.app.features.call.webrtc.WebRtcCallManager
 import im.vector.app.features.createdirect.DirectRoomHelper
 import im.vector.app.features.invite.AutoAcceptInvites
 import im.vector.app.features.invite.showInvites
+import im.vector.app.features.settings.VectorPreferences
 import im.vector.app.features.ui.UiStateRepository
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.Dispatchers
@@ -60,7 +61,8 @@ class HomeDetailViewModel @AssistedInject constructor(@Assisted initialState: Ho
                                                       private val callManager: WebRtcCallManager,
                                                       private val directRoomHelper: DirectRoomHelper,
                                                       private val appStateHandler: AppStateHandler,
-private val autoAcceptInvites: AutoAcceptInvites)
+                                                      private val vectorPreferences: VectorPreferences,
+                                                      private val autoAcceptInvites: AutoAcceptInvites)
     : VectorViewModel<HomeDetailViewState, HomeDetailAction, HomeDetailViewEvents>(initialState),
         CallProtocolsChecker.Listener {
 
@@ -103,6 +105,14 @@ private val autoAcceptInvites: AutoAcceptInvites)
             is HomeDetailAction.SwitchTab                -> handleSwitchTab(action)
             HomeDetailAction.MarkAllRoomsRead            -> handleMarkAllRoomsRead()
             is HomeDetailAction.StartCallWithPhoneNumber -> handleStartCallWithPhoneNumber(action)
+            HomeDetailAction.ViewResumed                 -> handleViewResumed()
+        }
+    }
+
+    private fun handleViewResumed() {
+        // Good place to check for layout mode
+        setState {
+            copy(layoutMode = vectorPreferences.getLayoutMode())
         }
     }
 
@@ -256,13 +266,17 @@ private val autoAcceptInvites: AutoAcceptInvites)
 
                             setState {
                                 copy(
+                                        // On home we don't count DMs or Other rooms as it will be already highlighted in
+                                        // their respected tabs
                                         notificationCountHome = roomsInvite + dmInvites + favRooms.totalCount,
                                         notificationHighlightHome = dmInvites + roomsInvite > 0 || favRooms.totalCount > 0,
                                         notificationCountPeople = dmRooms.totalCount,
                                         notificationHighlightPeople = dmRooms.isHighlight,
                                         notificationCountRooms = otherRooms.totalCount + roomsInvite,
                                         notificationHighlightRooms = otherRooms.isHighlight,
-                                        hasUnreadMessages = dmRooms.totalCount + otherRooms.totalCount > 0
+                                        hasUnreadMessages = dmRooms.totalCount + otherRooms.totalCount > 0,
+                                        notificationCountAllInOne = roomsInvite + dmInvites + favRooms.totalCount + otherRooms.totalCount,
+                                        notificationHighlightAllInOne = dmInvites + roomsInvite > 0 || favRooms.totalCount > 0 || otherRooms.totalCount > 0
                                 )
                             }
                         }

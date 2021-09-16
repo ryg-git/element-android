@@ -22,6 +22,7 @@ import com.airbnb.mvrx.MvRxState
 import com.airbnb.mvrx.Uninitialized
 import im.vector.app.R
 import im.vector.app.RoomGroupingMethod
+import im.vector.app.features.settings.LayoutMode
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
 import org.matrix.android.sdk.api.session.sync.SyncState
 import org.matrix.android.sdk.api.util.MatrixItem
@@ -37,9 +38,12 @@ data class HomeDetailViewState(
         val notificationHighlightPeople: Boolean = false,
         val notificationCountRooms: Int = 0,
         val notificationHighlightRooms: Boolean = false,
+        val notificationCountAllInOne: Int = 0,
+        val notificationHighlightAllInOne: Boolean = false,
         val hasUnreadMessages: Boolean = false,
         val syncState: SyncState = SyncState.Idle,
-        val showDialPadTab: Boolean = false
+        val showDialPadTab: Boolean = false,
+        val layoutMode: LayoutMode = LayoutMode.PRODUCTIVITY
 ) : MvRxState
 
 sealed class HomeTab(@StringRes val titleRes: Int) {
