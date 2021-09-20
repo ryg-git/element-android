@@ -393,9 +393,12 @@
         <activity
             android:name=".features.spaces.people.SpacePeopleActivity"
             android:exported="false"/>
-        <!-- Services -->
+        <activity android:name=".features.spaces.leave.SpaceLeaveAdvancedActivity"
+            android:exported="false"/>
 
-        <service
+      <!-- Services -->
+
+      <service
             android:name=".core.services.CallService"
             android:exported="false">
             <!-- in order to get headset button events -->
