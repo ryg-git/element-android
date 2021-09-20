@@ -48,10 +48,10 @@ import javax.inject.Inject
 class RoomListViewModel @Inject constructor(
         initialState: RoomListViewState,
         private val session: Session,
-        private val stringProvider: StringProvider,
-        private val appStateHandler: AppStateHandler,
-        private val vectorPreferences: VectorPreferences,
-        private val autoAcceptInvites: AutoAcceptInvites
+        stringProvider: StringProvider,
+        appStateHandler: AppStateHandler,
+        vectorPreferences: VectorPreferences,
+        autoAcceptInvites: AutoAcceptInvites
 ) : VectorViewModel<RoomListViewState, RoomListAction, RoomListViewEvents>(initialState) {
 
     interface Factory {
@@ -72,11 +72,13 @@ class RoomListViewModel @Inject constructor(
          * If current space is null, will return orphan rooms only
          */
         ORPHANS_IF_SPACE_NULL,
+
         /**
          * Special case when we don't want to discriminate rooms when current space is null.
          * In this case return all.
          */
         ALL_IF_SPACE_NULL,
+
         /** Do not filter based on space*/
         NONE
     }
@@ -320,7 +322,7 @@ class RoomListViewModel @Inject constructor(
 
     private fun String.otherTag(): String? {
         return when (this) {
-            RoomTag.ROOM_TAG_FAVOURITE -> RoomTag.ROOM_TAG_LOW_PRIORITY
+            RoomTag.ROOM_TAG_FAVOURITE    -> RoomTag.ROOM_TAG_LOW_PRIORITY
             RoomTag.ROOM_TAG_LOW_PRIORITY -> RoomTag.ROOM_TAG_FAVOURITE
             else                          -> null
         }
