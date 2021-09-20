@@ -17,6 +17,7 @@
 package org.matrix.android.sdk.internal.session.presence
 
 import org.matrix.android.sdk.internal.network.NetworkConstants
+import org.matrix.android.sdk.internal.session.presence.messages.GetPresenceResponse
 import org.matrix.android.sdk.internal.session.presence.messages.SetPresenceBody
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -38,6 +39,6 @@ internal interface PresenceAPI {
      * Ref: https://matrix.org/docs/spec/client_server/latest#get-matrix-client-r0-presence-userid-status
      */
     @GET(NetworkConstants.URI_API_PREFIX_PATH_R0 + "presence/{userId}/status")
-    suspend fun getPresence(@Path("userId") userId: String): Any
+    suspend fun getPresence(@Path("userId") userId: String): GetPresenceResponse
 
 }
