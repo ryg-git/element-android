@@ -124,7 +124,7 @@ class VectorFirebaseMessagingService : FirebaseMessagingService() {
         Timber.i("onNewToken: FCM Token has been updated")
         FcmHelper.storeFcmToken(this, refreshedToken)
         if (vectorPreferences.areNotificationEnabledForDevice() && activeSessionHolder.hasActiveSession()) {
-            pusherManager.registerPusherWithFcmKey(refreshedToken)
+            pusherManager.enqueueRegisterPusherWithFcmKey(refreshedToken)
         }
     }
 
