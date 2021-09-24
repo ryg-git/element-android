@@ -51,12 +51,12 @@ import org.matrix.android.sdk.common.SessionTestParams
 
 @RunWith(JUnit4::class)
 @FixMethodOrder(MethodSorters.JVM)
+@Suppress("EXPERIMENTAL_API_USAGE")
 class SpaceHierarchyTest : InstrumentedTest {
 
     private val commonTestHelper = CommonTestHelper(context())
 
     @Test
-    @Suppress("EXPERIMENTAL_API_USAGE")
     fun createCanonicalChildRelation() {
         val session = commonTestHelper.createAccount("John", SessionTestParams(true))
         val spaceName = "My Space"
@@ -181,7 +181,6 @@ class SpaceHierarchyTest : InstrumentedTest {
 //    }
 
     @Test
-    @Suppress("EXPERIMENTAL_API_USAGE")
     fun testFilteringBySpace() {
         val session = commonTestHelper.createAccount("John", SessionTestParams(true))
 
@@ -265,7 +264,6 @@ class SpaceHierarchyTest : InstrumentedTest {
     }
 
     @Test
-    @Suppress("EXPERIMENTAL_API_USAGE")
     fun testBreakCycle() {
         val session = commonTestHelper.createAccount("John", SessionTestParams(true))
 
@@ -313,7 +311,6 @@ class SpaceHierarchyTest : InstrumentedTest {
     }
 
     @Test
-    @Suppress("EXPERIMENTAL_API_USAGE")
     fun testLiveFlatChildren() {
         val session = commonTestHelper.createAccount("John", SessionTestParams(true))
 
@@ -404,7 +401,6 @@ class SpaceHierarchyTest : InstrumentedTest {
             val roomIds: List<String>
     )
 
-    @Suppress("EXPERIMENTAL_API_USAGE")
     private fun createPublicSpace(session: Session,
                                   spaceName: String,
                                   childInfo: List<Triple<String, Boolean, Boolean?>>
@@ -445,7 +441,6 @@ class SpaceHierarchyTest : InstrumentedTest {
         return TestSpaceCreationResult(spaceId, roomIds)
     }
 
-    @Suppress("EXPERIMENTAL_API_USAGE")
     private fun createPrivateSpace(session: Session,
                                    spaceName: String,
                                    childInfo: List<Triple<String, Boolean, Boolean?>>
