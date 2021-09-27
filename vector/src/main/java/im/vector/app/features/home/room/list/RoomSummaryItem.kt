@@ -97,18 +97,18 @@ abstract class RoomSummaryItem : VectorEpoxyModel<RoomSummaryItem.Holder>() {
     }
 
     private fun handlePresence(holder: Holder) =
-        holder.roomAvatarPresenceImageView.apply {
-            if(izDirect){
-                isVisible = true
-                if(userPresence?.presence == PresenceEnum.ONLINE){
-                    setImageResource(R.drawable.ic_presence_online)
-                }else{
-                    setImageResource(R.drawable.ic_presence_offline)
+            holder.roomAvatarPresenceImageView.apply {
+                if (izDirect) {
+                    isVisible = true
+                    if (userPresence?.presence == PresenceEnum.ONLINE) {
+                        setImageResource(R.drawable.ic_presence_online)
+                    } else {
+                        setImageResource(R.drawable.ic_presence_offline)
+                    }
+                } else {
+                    isVisible = false
                 }
-            }else{
-                isVisible = false
             }
-        }
 
     private fun renderSelection(holder: Holder, isSelected: Boolean) {
         if (isSelected) {

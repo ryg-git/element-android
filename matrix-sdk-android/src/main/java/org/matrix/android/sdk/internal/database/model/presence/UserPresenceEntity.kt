@@ -28,10 +28,15 @@ internal open class UserPresenceEntity(@PrimaryKey var userId: String = "",
 ) : RealmObject() {
 
     var presence: PresenceEnum
-        get() { return PresenceEnum.valueOf(presenceStr) }
-        set(value) { presenceStr = value.name }
+        get() {
+            return PresenceEnum.valueOf(presenceStr)
+        }
+        set(value) {
+            presenceStr = value.name
+        }
 
     private var presenceStr: String = PresenceEnum.UNAVAILABLE.name
+
     companion object
 }
 

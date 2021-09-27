@@ -17,28 +17,13 @@
 package org.matrix.android.sdk.internal.session.sync.handler
 
 import io.realm.Realm
-import io.realm.kotlin.createObject
-import io.realm.kotlin.where
-import org.matrix.android.sdk.api.pushrules.RuleScope
-import org.matrix.android.sdk.api.pushrules.RuleSetKey
-import org.matrix.android.sdk.api.pushrules.rest.GetPushRulesResponse
-import org.matrix.android.sdk.api.session.accountdata.UserAccountDataEvent
 import org.matrix.android.sdk.api.session.events.model.EventType
-import org.matrix.android.sdk.api.session.events.model.toModel
-import org.matrix.android.sdk.internal.database.mapper.PushRulesMapper
-import org.matrix.android.sdk.internal.database.model.PushRulesEntity
 import org.matrix.android.sdk.internal.database.model.RoomSummaryEntity
-import org.matrix.android.sdk.internal.database.model.RoomSummaryEntityFields
-import org.matrix.android.sdk.internal.database.model.UserDraftsEntity
-import org.matrix.android.sdk.internal.database.model.deleteOnCascade
 import org.matrix.android.sdk.internal.database.model.presence.UserPresenceEntity
-import org.matrix.android.sdk.internal.database.query.getDirectRooms
 import org.matrix.android.sdk.internal.database.query.presence.insertOrUpdate
 import org.matrix.android.sdk.internal.database.query.updateDirectUserPresence
-import org.matrix.android.sdk.internal.database.query.where
 import org.matrix.android.sdk.internal.session.presence.messages.PresenceEnum
 import org.matrix.android.sdk.internal.session.sync.model.PresenceSyncResponse
-import timber.log.Timber
 import javax.inject.Inject
 
 internal class PresenceSyncHandler @Inject constructor() {

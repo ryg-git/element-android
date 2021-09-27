@@ -36,13 +36,11 @@ import org.matrix.android.sdk.internal.database.model.PreviewUrlCacheEntityField
 import org.matrix.android.sdk.internal.database.model.RoomAccountDataEntityFields
 import org.matrix.android.sdk.internal.database.model.RoomEntityFields
 import org.matrix.android.sdk.internal.database.model.RoomMembersLoadStatusType
-import org.matrix.android.sdk.internal.database.model.RoomSummaryEntity
 import org.matrix.android.sdk.internal.database.model.RoomSummaryEntityFields
 import org.matrix.android.sdk.internal.database.model.RoomTagEntityFields
 import org.matrix.android.sdk.internal.database.model.SpaceChildSummaryEntityFields
 import org.matrix.android.sdk.internal.database.model.SpaceParentSummaryEntityFields
 import org.matrix.android.sdk.internal.database.model.TimelineEventEntityFields
-import org.matrix.android.sdk.internal.database.model.presence.UserPresenceEntity
 import org.matrix.android.sdk.internal.database.model.presence.UserPresenceEntityFields
 import org.matrix.android.sdk.internal.di.MoshiProvider
 import org.matrix.android.sdk.internal.query.process
