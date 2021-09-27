@@ -44,7 +44,7 @@ import org.matrix.android.sdk.internal.session.media.MediaModule
 import org.matrix.android.sdk.internal.session.openid.OpenIdModule
 import org.matrix.android.sdk.internal.session.presence.di.PresenceModule
 import org.matrix.android.sdk.internal.session.profile.ProfileModule
-import org.matrix.android.sdk.internal.session.pushers.AddHttpPusherWorker
+import org.matrix.android.sdk.internal.session.pushers.AddPusherWorker
 import org.matrix.android.sdk.internal.session.pushers.PushersModule
 import org.matrix.android.sdk.internal.session.room.RoomModule
 import org.matrix.android.sdk.internal.session.room.relation.SendRelationWorker
@@ -129,7 +129,7 @@ internal interface SessionComponent {
 
     fun inject(worker: SyncWorker)
 
-    fun inject(worker: AddHttpPusherWorker)
+    fun inject(worker: AddPusherWorker)
 
     fun inject(worker: SendVerificationMessageWorker)
 

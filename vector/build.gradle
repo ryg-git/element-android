@@ -13,8 +13,8 @@ kapt {
 
 // Note: 2 digits max for each value
 ext.versionMajor = 1
-ext.versionMinor = 2
-ext.versionPatch = 3
+ext.versionMinor = 3
+ext.versionPatch = 1
 
 static def getGitTimestamp() {
     def cmd = 'git show -s --format=%ct'
@@ -334,7 +334,7 @@ dependencies {
     implementation libs.androidx.constraintLayout
     implementation "androidx.sharetarget:sharetarget:1.1.0"
     implementation libs.androidx.core
-    implementation "androidx.media:media:1.4.1"
+    implementation "androidx.media:media:1.4.2"
     implementation "androidx.transition:transition:1.4.1"
 
     implementation "org.threeten:threetenbp:1.4.0:no-tzdb"
@@ -345,6 +345,9 @@ dependencies {
     implementation libs.androidx.lifecycleExtensions
     implementation libs.androidx.lifecycleLivedata
 
+    implementation libs.androidx.datastore
+    implementation libs.androidx.datastorepreferences
+
 
     // Log
     implementation libs.jakewharton.timber
@@ -353,7 +356,7 @@ dependencies {
     implementation 'com.facebook.stetho:stetho:1.6.0'
 
     // Phone number https://github.com/google/libphonenumber
-    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.32'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.33'
 
     // rx
     implementation libs.rx.rxKotlin
@@ -406,7 +409,7 @@ dependencies {
     // To convert voice message on old platforms
     implementation 'com.arthenica:ffmpeg-kit-audio:4.4.LTS'
 
-    //Alerter
+    // Alerter
     implementation 'com.tapadoo.android:alerter:7.0.1'
 
     implementation 'com.otaliastudios:autocomplete:1.1.0'
@@ -505,7 +508,8 @@ dependencies {
     // Plant Timber tree for test
     androidTestImplementation libs.tests.timberJunitRule
     // "The one who serves a great Espresso"
-    androidTestImplementation('com.adevinta.android:barista:4.1.0') {
+    androidTestImplementation('com.adevinta.android:barista:4.2.0') {
         exclude group: 'org.jetbrains.kotlin'
     }
+    androidTestUtil libs.androidx.orchestrator
 }
