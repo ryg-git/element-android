@@ -37,7 +37,7 @@ internal abstract class PresenceModule {
         @Provides
         @JvmStatic
         @SessionScope
-        fun providesProfileAPI(retrofit: Retrofit): PresenceAPI {
+        fun providesPresenceAPI(retrofit: Retrofit): PresenceAPI {
             return retrofit.create(PresenceAPI::class.java)
         }
     }
