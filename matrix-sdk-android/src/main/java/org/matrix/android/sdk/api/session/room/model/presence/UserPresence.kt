@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package org.matrix.android.sdk.internal.session.sync
+package org.matrix.android.sdk.api.session.room.model.presence
 
-internal class SyncResponsePostTreatmentAggregator {
-    // List of RoomId
-    val ephemeralFilesToDelete = mutableListOf<String>()
-    // Map of roomId to directUserId
-    val directChatsToCheck = mutableMapOf<String, String>()
-}
+import org.matrix.android.sdk.internal.session.presence.messages.PresenceEnum
+
+data class UserPresence (
+        val lastActiveAgo: Long? = null,
+        val statusMessage: String? = null,
+        val isCurrentlyActive: Boolean? = null,
+        val presence: PresenceEnum = PresenceEnum.OFFLINE
+        )

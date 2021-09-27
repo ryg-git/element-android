@@ -84,6 +84,21 @@
         app:layout_constraintCircleAngle="135"
         app:layout_constraintCircleRadius="28dp"
         tools:ignore="MissingConstraints"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/roomAvatarPresenceImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_circle"
+        android:contentDescription="@string/a11y_public_room"
+        android:padding="2dp"
+        android:src="@drawable/ic_presence_offline"
+        android:visibility="gone"
+        app:layout_constraintCircle="@id/roomAvatarContainer"
+        app:layout_constraintCircleAngle="135"
+        app:layout_constraintCircleRadius="28dp"
+        tools:ignore="MissingConstraints"
         tools:visibility="visible" />
 
     <!-- Margin bottom does not work, so I use space -->

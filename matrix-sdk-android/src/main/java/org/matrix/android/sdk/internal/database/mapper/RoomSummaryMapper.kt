@@ -20,6 +20,7 @@ import org.matrix.android.sdk.api.session.room.model.RoomJoinRules
 import org.matrix.android.sdk.api.session.room.model.RoomSummary
 import org.matrix.android.sdk.api.session.room.model.SpaceChildInfo
 import org.matrix.android.sdk.api.session.room.model.SpaceParentInfo
+import org.matrix.android.sdk.api.session.room.model.presence.UserPresence
 import org.matrix.android.sdk.api.session.room.model.tag.RoomTag
 import org.matrix.android.sdk.internal.database.model.RoomSummaryEntity
 import org.matrix.android.sdk.internal.session.typing.DefaultTypingUsersTracker
@@ -97,7 +98,8 @@ internal class RoomSummaryMapper @Inject constructor(private val timelineEventMa
                             worldReadable = it.childSummaryEntity?.joinRules == RoomJoinRules.PUBLIC
                     )
                 },
-                flattenParentIds = roomSummaryEntity.flattenParentIds?.split("|") ?: emptyList()
+                flattenParentIds = roomSummaryEntity.flattenParentIds?.split("|") ?: emptyList(),
+                userPresence = roomSummaryEntity.presence?.let { UserPresence(it.lastActiveAgo, it.statusMessage, it.isCurrentlyActive, it.presence) }
         )
     }
 }

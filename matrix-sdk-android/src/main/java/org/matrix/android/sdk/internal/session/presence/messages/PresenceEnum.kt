@@ -25,11 +25,16 @@ import com.squareup.moshi.JsonClass
  */
 
 @JsonClass(generateAdapter = false)
-enum class PresenceEnum {
+enum class PresenceEnum(val value: String) {
     @Json(name = "online")
-    ONLINE,
+    ONLINE("online"),
     @Json(name = "offline")
-    OFFLINE,
+    OFFLINE("offline"),
     @Json(name = "unavailable")
-    UNAVAILABLE
+    UNAVAILABLE("unavailable");
+
+    companion object {
+        fun from(s: String): PresenceEnum? = values().find { it.value == s }
+    }
+
 }

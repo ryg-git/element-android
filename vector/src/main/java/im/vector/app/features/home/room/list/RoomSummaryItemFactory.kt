@@ -124,6 +124,8 @@ class RoomSummaryItemFactory @Inject constructor(private val displayableEventFor
                 // We do not display shield in the room list anymore
                 // .encryptionTrustLevel(roomSummary.roomEncryptionTrustLevel)
                 .izPublic(roomSummary.isPublic)
+                .izDirect(roomSummary.isDirect)
+                .userPresence(roomSummary.userPresence)
                 .matrixItem(roomSummary.toMatrixItem())
                 .lastEventTime(latestEventTime)
                 .typingMessage(typingMessage)

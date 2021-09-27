@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.matrix.android.sdk.internal.session.sync
+package org.matrix.android.sdk.internal.session.sync.handler.room
 
 import org.matrix.android.sdk.internal.database.model.ReadMarkerEntity
 import org.matrix.android.sdk.internal.database.model.RoomSummaryEntity

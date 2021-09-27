@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021 The Matrix.org Foundation C.I.C.
+ * Copyright (c) 2021 New Vector Ltd
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,9 +14,11 @@
  * limitations under the License.
  */
 
-package org.matrix.android.sdk.internal.session.sync
+package org.matrix.android.sdk.internal.session.sync.handler
 
 import org.matrix.android.sdk.api.MatrixPatterns
+import org.matrix.android.sdk.internal.session.sync.RoomSyncEphemeralTemporaryStore
+import org.matrix.android.sdk.internal.session.sync.SyncResponsePostTreatmentAggregator
 import org.matrix.android.sdk.internal.session.sync.model.accountdata.toMutable
 import org.matrix.android.sdk.internal.session.user.accountdata.DirectChatsHelper
 import org.matrix.android.sdk.internal.session.user.accountdata.UpdateUserAccountDataTask
